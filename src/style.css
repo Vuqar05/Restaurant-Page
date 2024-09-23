@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    width: 100vw;
+    background-color: #041212;
+    color: white;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        appearance: none;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    button:hover {
+        color: firebrick;
+    }
+}
+
+a, a:visited{
+    color: white;
+}
+
+a:hover {
+    color: firebrick;
+}
+
+#content {
+    flex-grow: 1;
+}
+
+#content:has(#home-content) {
+    display: flex;
+}
+
+#home-content {
+    display: flex;
+    flex-grow: 1;
+
+    .name-side {
+        flex: 1 0 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        p {
+            padding: 2rem;
+            line-height: 2rem;
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .img-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 60%;
+        background-image: url("./img/shio-yang-RQYKAv-4F-U-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+#menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .menu-item {
+        width: 50vw;
+        background-color: #061a1a;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 0 0 .5rem;
+    }
+
+    .menu-item-img {
+        width: 100%;
+    }
+
+    .menu-item-caption {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 95%;
+        margin: auto;
+    }
+
+    .credits {
+        font-size: .8rem;
+    }
+}
+
+
+#content:has(#about-content) {
+    display: flex;
+    align-items: center;
+}
+
+
+#about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    p {
+        max-width: 50ch;
+        text-align: center;
+    }
+
+}
